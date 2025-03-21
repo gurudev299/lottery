@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <title>My Learning Website</title>  
-      <img src="37772.jpg" height="200" alt="My Picture"/>
-    </head>
-    <body>
-        <h1>GD Industries</h1>
-        <hr>
-        <h2>This is a Digital Production Company.</h2>
-         <h3><a href="https://www.youtube.com/channel/UCq2bD8v7CU6jAEvYqaGFT4g">My Youtube Channel</a></h3>
-        <ol>
-            <li>You can earn more than 30K per month.</li>
-            <li>As much as you can hard work and earn money.</li>
-            <li>No one is doing like you, do you know?</li>
-        </ol>
-        <img src="37772.jpg" height="200" alt="My Picture"/>
-        <br>
-        <h3><a href="./Rani/invite.html">Invitation</a></h3>
-        <ul>
-            <li>Don't do that</li>
-            <li>Actually this is bad habbit</li>
-            <li>Be a gentleman</li>
-        </ul>
-        <img src="37772.jpg" height="200" alt="My Picture"/>
-        <br>
-        <h3> <a href="./about.html/about.html">About Me</a></h3>
-         <h3><a href="./about.html/contact.html">Contact Me</a></h3>
-        <p>Same time watching IPL and coding also.</p>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottery System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Lottery Ticket Purchase</h1>
+      <form id="purchase-form">
+        <label for="username">Name:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="card-element">Credit or debit card:</label>
+        <div id="card-element"></div>
+        <div id="card-errors" role="alert"></div>
+        <button type="submit">Buy Ticket</button>
+      </form>
+      <div id="receipt" style="display: none">
+        <h2>Receipt</h2>
+        <p>Thank you for your purchase, <span id="receipt-name"></span>!</p>
+        <p>Your ticket number is: <span id="ticket-number"></span></p>
+      </div>
+    </div>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
-
